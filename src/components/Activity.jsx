@@ -36,6 +36,25 @@ const iconBGStyle = {
     backgroundColor : iconBG
 }
 
+let currentTimeframe;
+let previousTimeframe;
+
+switch(props.timeframe){
+    case 'Daily':
+        currentTimeframe = props.dailyCurrent;
+        previousTimeframe = props.dailyPrevious;
+        break;
+    case 'Weekly':
+        currentTimeframe = props.weeklyCurrent;
+        previousTimeframe = props.weeklyPrevious;
+        break;
+    case 'Monthly':
+        currentTimeframe = props.monthlyCurrent;
+        previousTimeframe = props.monthlyPrevious;
+        break;
+    default:
+}
+
   return (
     <div className='activity--container'>
         <div className='activity--icon--container' style={iconBGStyle}>
@@ -44,11 +63,11 @@ const iconBGStyle = {
         <div className='activity--details--container'>
             <div>
                 <p className='activity--title'>{props.title}</p>
-                <p className='activity--hour'>{props.dailyCurrent}hrs</p>
+                <p className='activity--hour'>{currentTimeframe}hrs</p>
             </div>
             <div>
                 <img src="./src/assets/images/icon-ellipsis.svg" alt="Ellipsis icon" />
-                <p className='activity--previous--hour'>Last Week - {props.dailyPrevious}hrs</p>
+                <p className='activity--previous--hour'>Last {props.timeframe} - {previousTimeframe}hrs</p>
             </div>
         </div>
     </div>

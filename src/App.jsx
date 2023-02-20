@@ -3,10 +3,15 @@ import Activity from './components/Activity'
 import User from './components/User'
 import './App.css'
 import data from '/data.json'
+import { useState } from 'react'
 
 const App = () => {
 
-//console.log(data)
+const [timeframe, setTimeframe] = useState('Daily')
+
+function showTimeframe(e){
+setTimeframe(e.target.id)
+}
 
 const activityElements = data.map((data, index) => <Activity 
   key={index}
@@ -16,12 +21,13 @@ const activityElements = data.map((data, index) => <Activity
   weeklyCurrent={data.timeframes.weekly.current}
   weeklyPrevious={data.timeframes.weekly.previous}
   monthlyCurrent={data.timeframes.monthly.current}
-  montlyPrevious={data.timeframes.monthly.previous}
+  monthlyPrevious={data.timeframes.monthly.previous}
+  timeframe={timeframe}
    />)
 
   return (
     <div className='app--container'>
-      <User />
+      <User handleClick={showTimeframe}/>
       {activityElements}
     </div>
   )
