@@ -22,3 +22,50 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    font-family: var(--FF);
+    background-color: var(--VERYDARKBLUE);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.report--container{
+    max-width: 335px;
+
+}
+
+.account--container{
+    background-color: var(--BLUE);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 20px;
+    border-radius: 10px 10px 0 0;
+    color: var(--DESATURATEDBLUE);
+}
+
+.account--name{
+    color: var(--PALEBLUE);
+    font-size: 1.7rem;
+    white-space: nowrap;
+}
+
+.account--container > img {
+    width: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.periodical--lists{
+    background-color: var(--DARKBLUE);
+    display: flex;
+    border-radius: 0 0 10px 10px;
+    list-style: none;
+    justify-content: space-between;
+    color: var(--DESATURATEDBLUE);
+    padding: 20px;
+}   
+
