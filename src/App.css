@@ -29,6 +29,7 @@ body{
     display: grid;
     place-items: center;
     min-height: 100vh;
+    color: white;
 }
 
 .app--container{
@@ -47,19 +48,18 @@ body{
     gap: 10px;
     padding: 30px 20px;
     border-radius: 10px;
-    color: var(--DESATURATEDBLUE);
     height: 60%;
 }
 
 .account--name{
-    color: var(--PALEBLUE);
+    font-weight: lighter;
     font-size: 1.7rem;
     white-space: nowrap;
 }
 
 .account--container > img {
     width: 60px;
-    border: 2px solid white;
+    border: 3px solid white;
     border-radius: 50%;
 }
 
@@ -69,7 +69,6 @@ body{
     border-radius: 0 0 10px 10px;
     list-style: none;
     justify-content: space-between;
-    color: var(--DESATURATEDBLUE);
     padding: 20px;
     cursor: pointer;
     height: 40%;
@@ -80,7 +79,7 @@ body{
 }
 
 .activity--container{
-    width: 335px;
+    max-width: 335px;
     min-height: 160px;
     margin-top: 20px;
     position: relative;
@@ -110,7 +109,8 @@ body{
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    text-align: right;
+    align-items: end;
+    text-align: left;
     line-height: 2rem;
     border-radius: 10px;
     cursor: pointer;
@@ -120,25 +120,33 @@ body{
    background-color: var(--DESATURATEDBLUE);
 }
 
+.activity--details--container > div{
+    width: 100%;
+}
+
 .activity--details--container > img {
     cursor: pointer;
 }
 
 .activity--title{
-    color: var(--PALEBLUE);
-    font-weight: bold;
     text-align: left;
 }
 
 .activity--hour{
-    color: var(--PALEBLUE);
-    font-size: 2rem;
+    font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: lighter;
 }
 
 .activity--previous--hour{
-    color: var(--DESATURATEDBLUE);
+    color: var(--PALEBLUE);
     font-size: .9rem;
+    text-align: right;
+}
+
+.icon--ellipsis{
+    position: absolute;
+    top: 35px;
+    right: 20px;
 }
 
 .attribution{
@@ -157,7 +165,7 @@ body{
         display: grid;
         grid-template-columns: repeat(4,1fr);
         margin-inline: 20px;
-        gap: 20px;
+        gap: 30px;
 
     }
     .report--container{
@@ -177,6 +185,10 @@ body{
         white-space: inherit;
     }
 
+    .account--container > img{
+        width: 70px;
+    }
+
     .periodical--lists{
         flex-direction: column;
         justify-content: space-evenly;
@@ -194,7 +206,11 @@ body{
     }
 
     .activity--hour{
-        font-size: 2.5rem;
+        margin-top: 30px;
+    }
+
+    .activity--previous--hour{
+        text-align: left;
     }
 
 

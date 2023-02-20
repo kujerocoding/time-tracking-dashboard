@@ -64,11 +64,13 @@ const idContainer = props.title.replace(props.title[0], props.title[0].toLowerCa
         </div>
         <div className='activity--details--container'>
             <div>
-                <p className='activity--title'>{props.title}</p>
+                <p className='activity--title'>{props.title}
+                <span><img className='icon--ellipsis' src="./src/assets/images/icon-ellipsis.svg" alt="Ellipsis icon" /></span>
+                </p>
                 <p className='activity--hour'>{currentTimeframe}hrs</p>
             </div>
             <div>
-                <img src="./src/assets/images/icon-ellipsis.svg" alt="Ellipsis icon" />
+                
                 <p className='activity--previous--hour'>Last {props.timeframe} - {previousTimeframe}hrs</p>
             </div>
         </div>
