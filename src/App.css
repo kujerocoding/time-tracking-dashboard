@@ -31,6 +31,10 @@ body{
     min-height: 100vh;
 }
 
+.app--container{
+    margin-block: 70px;
+}
+
 .report--container{
     max-width: 335px;
 
@@ -126,5 +130,16 @@ body{
 .activity--previous--hour{
     color: var(--DESATURATEDBLUE);
     font-size: .9rem;
+}
+
+.attribution{
+    color: var(--DESATURATEDBLUE);
+    text-align: center;
+    font-size: .7rem;
+    margin-top: 40px;
+}
+
+.attribution > a {
+    color: var(--PALEBLUE);
 }
 
