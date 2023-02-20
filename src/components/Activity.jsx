@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Activity = () => {
+const Activity = (props) => {
   return (
     <div className='activity--container'>
         <div className='activity--icon--container'>
@@ -8,12 +8,12 @@ const Activity = () => {
         </div>
         <div className='activity--details--container'>
             <div>
-                <p className='activity--title'>Work</p>
-                <p className='activity--hour'>32hrs</p>
+                <p className='activity--title'>{props.title}</p>
+                <p className='activity--hour'>{props.dailyCurrent}</p>
             </div>
             <div>
                 <img src="./src/assets/images/icon-ellipsis.svg" alt="Ellipsis icon" />
-                <p className='activity--previous--hour'>Last Week - 8hrs</p>
+                <p className='activity--previous--hour'>Last Week - {props.dailyPrevious}hrs</p>
             </div>
         </div>
     </div>

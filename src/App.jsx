@@ -8,10 +8,16 @@ const App = () => {
 
 console.log(data)
 
+const activityElements = data.map(data => <Activity 
+  title={data.title}
+  dailyCurrent={data.timeframes.daily.current}
+  dailyPrevious={data.timeframes.daily.previous}
+   />)
+
   return (
     <div className='app--container'>
       <User />
-      <Activity />
+      {activityElements}
     </div>
   )
 }
