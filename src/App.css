@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+
+:root{
+    --FF: 'Rubik', sans-serif;
+    --FS: 18px;
+    --BLUE: hsl(246, 80%, 60%);
+    --WORKCOLOR: hsl(15, 100%, 70%);
+    --PLAYCOLOR: hsl(195, 74%, 62%);
+    --STUDYCOLOR: hsl(348, 100%, 68%);
+    --EXERCISECOLOR: hsl(145, 58%, 55%);
+    --SOCIALCOLOR: hsl(264, 64%, 52%);
+    --SELFCARECOLOr: hsl(43, 84%, 65%);
+    --VERYDARKBLUE: hsl(226, 43%, 10%);
+    --DARKBLUE: hsl(235, 46%, 20%);
+    --DESATURATEDBLUE: hsl(235, 45%, 61%);
+    --PALEBLUE: hsl(236, 100%, 87%);
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
