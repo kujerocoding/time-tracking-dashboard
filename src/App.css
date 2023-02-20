@@ -90,7 +90,7 @@ body{
 .activity--icon--container{
     background-color: var(--WORKCOLOR);
     width: 100%;
-    height: 100px;
+    height: 60px;
     position: absolute;
     border-radius: 10px 10px 0 0 ;
 }
@@ -112,7 +112,16 @@ body{
     justify-content: space-between;
     text-align: right;
     line-height: 2rem;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.activity--details--container:hover{
+   background-color: var(--DESATURATEDBLUE);
+}
+
+.activity--details--container > img {
+    cursor: pointer;
 }
 
 .activity--title{
