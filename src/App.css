@@ -67,5 +67,10 @@ body{
     justify-content: space-between;
     color: var(--DESATURATEDBLUE);
     padding: 20px;
-}   
+    cursor: pointer;
+}
+
+.periodical--lists > li:hover {
+    color: var(--PALEBLUE);
+}
 
