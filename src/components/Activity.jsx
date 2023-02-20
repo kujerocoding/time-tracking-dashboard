@@ -55,8 +55,10 @@ switch(props.timeframe){
     default:
 }
 
+const idContainer = props.title.replace(props.title[0], props.title[0].toLowerCase())
+
   return (
-    <div className='activity--container'>
+    <div className='activity--container' id={idContainer}>
         <div className='activity--icon--container' style={iconBGStyle}>
             <img src={`./src/assets/images/${imgURL}`} alt={props.title} />
         </div>
