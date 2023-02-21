@@ -70,7 +70,6 @@ const idContainer = props.title.replace(props.title[0], props.title[0].toLowerCa
                 <p className='activity--hour'>{currentTimeframe}hrs</p>
             </div>
             <div>
-                
                 <p className='activity--previous--hour'>Last {props.timeframe} - {previousTimeframe}hrs</p>
             </div>
         </div>

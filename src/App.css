@@ -2,19 +2,19 @@
 
 
 :root{
-    --FF: 'Rubik', sans-serif;
-    --FS: 18px;
     --BLUE: hsl(246, 80%, 60%);
-    --WORKCOLOR: hsl(15, 100%, 70%);
-    --PLAYCOLOR: hsl(195, 74%, 62%);
-    --STUDYCOLOR: hsl(348, 100%, 68%);
-    --EXERCISECOLOR: hsl(145, 58%, 55%);
-    --SOCIALCOLOR: hsl(264, 64%, 52%);
-    --SELFCARECOLOr: hsl(43, 84%, 65%);
-    --VERYDARKBLUE: hsl(226, 43%, 10%);
     --DARKBLUE: hsl(235, 46%, 20%);
     --DESATURATEDBLUE: hsl(235, 45%, 61%);
+    --EXERCISECOLOR: hsl(145, 58%, 55%);
+    --FF: 'Rubik', sans-serif;
+    --FS: 18px;
     --PALEBLUE: hsl(236, 100%, 87%);
+    --PLAYCOLOR: hsl(195, 74%, 62%);
+    --SELFCARECOLOr: hsl(43, 84%, 65%);
+    --SOCIALCOLOR: hsl(264, 64%, 52%);
+    --STUDYCOLOR: hsl(348, 100%, 68%);
+    --VERYDARKBLUE: hsl(226, 43%, 10%);
+    --WORKCOLOR: hsl(15, 100%, 70%);
 }
 
 *,*::before,*::after{
@@ -24,12 +24,12 @@
 }
 
 body{
-    font-family: var(--FF);
     background-color: var(--VERYDARKBLUE);
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
     color: white;
+    display: grid;
+    font-family: var(--FF);
+    min-height: 100vh;
+    place-items: center;
 }
 
 .app--container{
@@ -41,14 +41,14 @@ body{
 }
 
 .account--container{
-    background-color: var(--BLUE);
-    display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 30px 20px;
+    background-color: var(--BLUE);
     border-radius: 10px;
+    display: flex;
+    gap: 10px;
     height: 60%;
+    justify-content: center;
+    padding: 30px 20px;
 }
 
 .account--name{
@@ -58,62 +58,63 @@ body{
 }
 
 .account--container > img {
-    width: 60px;
-    border: 3px solid white;
     border-radius: 50%;
+    border: 3px solid white;
+    width: 60px;
 }
 
 .periodical--lists{
     background-color: var(--DARKBLUE);
-    display: flex;
     border-radius: 0 0 10px 10px;
-    list-style: none;
-    justify-content: space-between;
-    padding: 20px;
+    color: var(--DESATURATEDBLUE);
     cursor: pointer;
+    display: flex;
     height: 40%;
+    justify-content: space-between;
+    list-style: none;
+    padding: 20px;
 }
 
-.periodical--lists > li:hover {
-    color: var(--PALEBLUE);
+.periodical--lists > li:hover, .periodical--lists > li:focus  {
+    color: white;
 }
 
 .activity--container{
+    margin-top: 20px;
     max-width: 335px;
     min-height: 160px;
-    margin-top: 20px;
-    position: relative;
     overflow: hidden;
+    position: relative;
 }
 
 .activity--icon--container{
     background-color: var(--WORKCOLOR);
-    width: 100%;
+    border-radius: 10px 10px 0 0 ;
     height: 60px;
     position: absolute;
-    border-radius: 10px 10px 0 0 ;
+    width: 100%;
 }
 
 .activity--icon--container > img{
    position: absolute;
-   top: -10px;
    right: 20px;
+   top: -10px;
 }
 
 .activity--details--container{
+    align-items: end;
     background-color: var(--DARKBLUE);
-    position: absolute;
-    width: 100%;
-    top: 50px;
+    border-radius: 10px;
     bottom: 0;
-    padding: 20px;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
-    align-items: end;
-    text-align: left;
     line-height: 2rem;
-    border-radius: 10px;
-    cursor: pointer;
+    padding: 20px;
+    position: absolute;
+    text-align: left;
+    top: 50px;
+    width: 100%;
 }
 
 .activity--details--container:hover{
@@ -145,15 +146,15 @@ body{
 
 .icon--ellipsis{
     position: absolute;
-    top: 35px;
     right: 20px;
+    top: 35px;
 }
 
 .attribution{
     color: var(--DESATURATEDBLUE);
-    text-align: center;
     font-size: .7rem;
     margin-top: 40px;
+    text-align: center;
 }
 
 .attribution > a {
@@ -163,9 +164,9 @@ body{
 @media (min-width: 50em){
     .main--container{
         display: grid;
+        gap: 30px;
         grid-template-columns: repeat(4,1fr);
         margin-inline: 20px;
-        gap: 30px;
 
     }
     .report--container{
@@ -174,10 +175,10 @@ body{
     }
 
     .account--container{
-        flex-direction: column;
         align-items: start;
-        justify-content: start;
+        flex-direction: column;
         gap: 30px;
+        justify-content: start;
     }
 
     .account--name{
@@ -195,14 +196,14 @@ body{
     }
 
     .activity--container{
+        margin: 0;
         max-width: 250px;
         min-height: 250px;
-        margin: 0;
     }
 
     .activity--details--container{
-        flex-direction: column;
         align-items: start;
+        flex-direction: column;
     }
 
     .activity--hour{
@@ -212,6 +213,4 @@ body{
     .activity--previous--hour{
         text-align: left;
     }
-
-
 }
